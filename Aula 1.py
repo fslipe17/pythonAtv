@@ -1,5 +1,7 @@
 #Atividade pratica Aula 1
 
+Luiz Felipe Da Silva
+
     #Entrada de Dados
     # Solicite o Nome Completo do estudante.
     # Solicite o nome do Curso (ex: ADS ou Engenharia de Software).
@@ -20,7 +22,9 @@
 
     #Lista Atividades Aula 1
 
-        #Atividade 1
+        # 1. Dados Pessoais: Crie variáveis para armazenar seu nome, sua idade e sua
+        #     cidade. Imprima uma frase como: "Olá, meu nome é [nome], tenho [idade]
+        #     anos e moro em [cidade]."
 
             # nome = input('Digite seu nome: ')
             # idade = input('Digite sua Idade: ')
@@ -30,7 +34,8 @@
             
         #####################
 
-        #Atividade 2
+        #2. Eco Computacional: Escreva um programa que peça uma frase ao usuário e a
+            # imprima três vezes seguidas
 
             # frase = input('Digite uma Frase: ')
             
@@ -40,7 +45,9 @@
             
         #####################
             
-        #Atividade 3
+        # 3. Investigação de Tipos: Peça para o usuário digitar algo. Imprima o valor
+        #       digitado e, em seguida, use a função type() para mostrar ao aluno qual é o tipo
+        #       de dado que o Python capturou (lembre-o que o input sempre gera str).
         
             # algo = input('Digite algo: ')
                 
@@ -48,7 +55,9 @@
             
         #####################
             
-        #Atividade 4
+        # 4. Comentário Didático: Crie um código que armazene o número 10 em uma
+            # variável e o texto "10" em outra. Use um comentário de código (#) para
+            # explicar por que não podemos somar essas duas variáveis diretamente.
         
             # n = 10
             # n2 = "10"
@@ -64,7 +73,8 @@
             
         #####################
             
-        #Atividade 5
+        # 5. Montador de E-mail: Peça o nome e o sobrenome do usuário separadamente. Ao final, imprima uma
+        # sugestão de e-mail corporativo: nome.sobrenome@faculdade.com.br.
 
             # print('Dica de e-mail..\n')        
             
@@ -79,8 +89,9 @@
             
         #####################
             
-        #Atividade 6
-        
+        # 6. Ficha de Produto: Solicite o nome de um produto, a quantidade em estoque (converta para int) e o
+        # preço unitário (converta para float). Imprima as informações formatadas.
+
             # produto = input('Digite o nome do produto: ')
             # quant_estoque = int(input('Digite a quantidade no estoque: '))
             # preco_uni = float(input('Digite o valor do produto: '))
@@ -89,7 +100,9 @@
         
         #####################
         
-        #Atividade 7
+        # 7. Concatenador de Números: Peça dois números ao usuário, mas não os converta para int. Imprima a
+        # soma deles. O aluno verá que o resultado será a junção dos números (ex: 5 + 5 = 55). Peça para ele
+        # explicar isso em um comentário.
         
             # n1 = input('Digite um numero: ')
             # n2 = input('Digite outro numero: ')
@@ -104,7 +117,8 @@
         
         #####################
         
-        #Atividade 8
+        # 8. Ano de Nascimento: Peça a idade atual do usuário e calcule o ano em que ele nasceu (considere o ano
+        # atual 2026). Use apenas a subtração -.
         
             # idade = int(input('Digite sua idade: \n'))
             
@@ -114,7 +128,9 @@
                     
         #####################
         
-        #Atividade 9
+        # 9. Troca de Valores: Crie duas variáveis, a e b, e peça valores para elas. Em seguida, faça com que a
+        # receba o valor de b e b receba o valor de a. Imprima os novos valores (Dica: você precisará de uma
+        # terceira variável "auxiliar" para não perder os dados).
         
             # a = int(input('Digite um numero: \n'))
             # b = int(input('Digite outro numero: \n'))
@@ -135,34 +151,35 @@
         
         #####################
         
-        #Atividade 10
+        # 10. Gerador de Convite: Peça o nome de um convidado e o nome de um evento. Imprima um convite
+        # personalizado com bordas decorativas usando caracteres como * ou =.
         
-convidado = input('Nome do convidado: \n')
+            # convidado = input('Nome do convidado: \n')
+            
+            # evento = input('Nome do evento: \n')
+            
+            # largura = 19
+            # largura_borda = 21
+            
+            # borda = "=" * largura_borda
+            
+            # titulo = linha_conv = 'Convite'.center(largura)
+            # linha_vazia = "*" + " " * largura + "*"
+            # linha_foi = "*" + 'Vc Foi'.center(largura) + "*"
+            # linha_conv = "*" + 'convidado'.center(largura) + "*"
+            # linha_nome = "*" + f"{convidado}".center(largura) + "*"
+            # linha_para = "*" + 'para o'.center(largura) + "*"
+            # linha_evento = "*" + f" Evento no(a) {evento} ".center(largura) + "*"
+            
+            # print(borda)
+            # print(titulo)
+            # print(borda)
+            # print(linha_vazia)
+            # print(linha_nome)
+            # print(linha_conv)
+            # print(linha_para)
+            # print(linha_evento)
+            # print(linha_vazia)
+            # print(borda)
 
-evento = input('Nome do evento: \n')
-
-largura = 19
-largura_borda = 21
-
-borda = "=" * largura_borda
-
-titulo = linha_conv = 'Convite'.center(largura)
-linha_vazia = "*" + " " * largura + "*"
-linha_foi = "*" + 'Vc Foi'.center(largura) + "*"
-linha_conv = "*" + 'convidado'.center(largura) + "*"
-linha_nome = "*" + f"{convidado}".center(largura) + "*"
-linha_para = "*" + 'para o'.center(largura) + "*"
-linha_evento = "*" + f" Evento no(a) {evento} ".center(largura) + "*"
-
-print(borda)
-print(titulo)
-print(borda)
-print(linha_vazia)
-print(linha_nome)
-print(linha_conv)
-print(linha_para)
-print(linha_evento)
-print(linha_vazia)
-print(borda)
-
-####################
+##################
