@@ -9,38 +9,31 @@ while True:
             print(f"{chave.upper()}: {valor}")
     elif escolha == 2:
         while True:
-            for chave, valor in estoque.items():
+            nomeProduct = input("Digite o nome do Produto: ").upper()
+            
+            if nomeProduct not in estoque:
+                print("Produto não encontrado\n")
+                break
+            
+            valor = estoque[nomeProduct]
+            
+            quantProduct = int(input("Digite a quantidade que você deseja retirar: "))
+            
+            if quantProduct <= valor:
+                calculo = valor - quantProduct
+                print(f"Restará {calculo} unidades.")
                 
-                nomeProduct = input("Digite o nome do Produto: ").upper()
-            
-                quantProduct = int(input("Digite a quantidade que você deseja retirar: "))
+                certeza = int(input("Tem certeza que deseja retirar? 1. Sim  2. não: "))
                 
-                if nomeProduct != estoque[chave]:
-                    print(f"O produto {nomeProduct} tem: {valor}")
-                    
-                else:
-                    print(estoque.get("RA", "Produto não encontrado\n"))
-            
-            
-                if quantProduct <= valor:
-                    calculo = valor - quantProduct
-                    # estoque[chave]
-                    print(f"Restará {calculo} unidades.")
-                    
-                    certeza = int(input("Tem certeza que deseja retirar? 1. Sim  2. não: "))
-                    
-                    if certeza == 1:
-                        estoque[chave] = calculo
-                        historicoRetirada.insert(1, nomeProduct)
-                        print(f"O produto {nomeProduct} tem: {calculo}")
-                        print(historicoRetirada)
-                        break
-                    elif certeza == 2:
-                        break
-                    else:
-                        print("Refaça e digite um valor valido!!")
-                        break
-                    
-                elif quantProduct > valor:
-                    print("Você não pode retirar mais do que possui no estoque\n")
+                if certeza == 1:
+                    estoque[nomeProduct] = calculo
+                    historicoRetirada.insert(0, nomeProduct)
+                    print(f"O produto {nomeProduct} agora tem: {calculo}")
+                    # print(historicoRetirada)
                     break
+                else:
+                    break
+            
+            else:
+                print("Você não pode retirar mais do que possui no estoque\n")
+                break
